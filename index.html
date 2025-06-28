@@ -5,8 +5,8 @@
     <title>Stunning Cards</title>
     <style>
         body {
-            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
-            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -15,68 +15,81 @@
         }
         .card-container {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             flex-wrap: wrap;
             justify-content: center;
         }
         .card {
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            background: rgba(255,255,255,0.85);
+            border-radius: 28px;
+            box-shadow: 0 12px 40px 0 rgba(253, 160, 133, 0.18), 0 2px 8px 0 rgba(246, 211, 101, 0.10);
             overflow: hidden;
-            width: 320px;
-            max-width: 90vw;
-            transition: transform 0.2s, box-shadow 0.2s;
+            width: 340px;
+            max-width: 92vw;
+            transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s;
             cursor: pointer;
             position: relative;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            border: 1.5px solid #fda08533;
         }
         .card:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 16px 40px 0 rgba(31, 38, 135, 0.25);
+            transform: translateY(-14px) scale(1.04) rotate(-1deg);
+            box-shadow: 0 24px 60px 0 rgba(253, 160, 133, 0.25), 0 4px 16px 0 rgba(246, 211, 101, 0.13);
         }
         .card-image {
             width: 100%;
             height: 180px;
             object-fit: cover;
             display: block;
+            filter: brightness(0.96) saturate(1.15) contrast(1.05);
+            border-bottom: 3px solid #fda08544;
         }
         .card-content {
-            padding: 1.5rem;
+            padding: 1.7rem 1.5rem 1.5rem 1.5rem;
         }
         .card-title {
-            font-size: 1.5rem;
-            font-weight: 700;
+            font-size: 1.6rem;
+            font-weight: 800;
             margin: 0 0 0.5rem 0;
-            color: #3730a3;
+            color: #f76b1c;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 8px #fda08522;
         }
         .card-desc {
-            font-size: 1rem;
-            color: #64748b;
-            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            color: #f57c00;
+            margin-bottom: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0.1px;
         }
         .card-btn {
             display: inline-block;
-            padding: 0.5rem 1.2rem;
-            background: linear-gradient(90deg, #6366f1 0%, #a5b4fc 100%);
+            padding: 0.6rem 1.5rem;
+            background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
             color: #fff;
             border: none;
-            border-radius: 8px;
-            font-weight: 600;
+            border-radius: 12px;
+            font-weight: 700;
             text-decoration: none;
-            transition: background 0.2s;
+            font-size: 1.08rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px #fda08533;
+            transition: background 0.2s, transform 0.18s;
         }
         .card-btn:hover {
-            background: linear-gradient(90deg, #4338ca 0%, #818cf8 100%);
+            background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
+            color: #fff;
+            transform: scale(1.07) translateY(-2px);
+            box-shadow: 0 6px 18px #fda08544;
         }
         @media (max-width: 1000px) {
             .card-container {
-                gap: 1rem;
+                gap: 1.2rem;
             }
             .card {
-                width: 45vw;
-                min-width: 260px;
-                max-width: 95vw;
+                width: 90vw;
+                min-width: 220px;
+                max-width: 98vw;
             }
         }
         @media (max-width: 700px) {
@@ -85,7 +98,7 @@
                 align-items: center;
             }
             .card {
-                width: 95vw;
+                width: 98vw;
                 min-width: 0;
             }
         }
@@ -115,6 +128,30 @@
                 <h2 class="card-title">Book Now</h2>
                 <p class="card-desc">Secure your spot for the next amazing experience. Don’t miss out—reserve today!</p>
                 <a href="#" class="card-btn">Book Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-image" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Relaxation">
+            <div class="card-content">
+                <h2 class="card-title">Relax & Unwind</h2>
+                <p class="card-desc">Find your peace in tranquil destinations designed for ultimate relaxation and rejuvenation.</p>
+                <a href="#" class="card-btn">Relax Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-image" src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=800&q=80" alt="Culture">
+            <div class="card-content">
+                <h2 class="card-title">Cultural Journeys</h2>
+                <p class="card-desc">Immerse yourself in rich cultures, traditions, and histories from around the world.</p>
+                <a href="#" class="card-btn">Explore Culture</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-image" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Family">
+            <div class="card-content">
+                <h2 class="card-title">Family Fun</h2>
+                <p class="card-desc">Create lasting memories with family-friendly adventures and activities for all ages.</p>
+                <a href="#" class="card-btn">Family Time</a>
             </div>
         </div>
     </div>
